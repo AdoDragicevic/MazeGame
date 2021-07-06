@@ -6,7 +6,7 @@
 
     (function generateMazes() {
         mazelocations.forEach( (location, i) => {
-            const game = new MazeGame(location, difficultyLvl, `Player ${i+1}`, keys[i]);
+            const game = new MazeGame(location, difficultyLvl, `Player ${i+1}`, keys[i]); 
             mazes.push(game);
         });
     })();
@@ -59,14 +59,20 @@
         const players = menu.querySelector(".menu__player");
         const welcome = menu.querySelector(".menu__welcome");
 
-        exitBtn.addEventListener( "click", () => {
+        const exit = () => {
             menu.classList.remove("display-none");
             title.innerText = "Maze Game";
             exitBtn.classList.add("display-none");
             contents.forEach( div => div.classList.add("display-none") );
             welcome.classList.remove("display-none");
-            mazes.forEach( maze => maze.clear() );
-        });
+            mazes.forEach( maze => {
+                if(maze.world) maze.clear() 
+            });
+        };
+
+        window.addEventListener("resize", exit);
+
+        exitBtn.addEventListener( "click", exit);
 
         setPlayers.addEventListener( "click", () => {
             title.innerText = "Payers";
@@ -86,17 +92,18 @@
             contents.forEach( div => div.classList.add("display-none") );
             mazes[0].playerName = numOfPlayers === 1 ? null : "Player 1";
             mazelocations.forEach( (location, i) => {
-                if(i < numOfPlayers) {
-                    location.classList.remove("display-none");
-                } 
+                if(i < numOfPlayers) location.classList.remove("display-none");
                 else location.classList.add("display-none");
             });
             mazes.forEach( (maze, i) => {
                 if (i < numOfPlayers) {
-                    maze.location = mazelocations[i];
                     if(!maze.world) maze.init();
+                    maze.location = mazelocations[i];
                     maze.clear().setDifficulty(difficultyLvl).init();
-                } else maze.clear();
+                } 
+                else {
+                    if(maze.world) maze.clear();
+                }
             });
         });
 

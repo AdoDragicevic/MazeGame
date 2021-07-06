@@ -259,11 +259,6 @@
         var seconds = ((millis % 60000) / 1000).toFixed(0);
         return `${minutes}:${(seconds < 10 ? "0" : "")}${seconds}`;
     };
-    
-    const deleteObjects = (world) => {
-        console.log("unneded function");
-        //if(world) world.bodies.length = 0;
-    };
 
     const updateData = (location, difficulty) => {
         numOfVerticalCells = getNumOfCells("vertical", location, difficulty);
@@ -320,9 +315,6 @@
         },
 
         clear() {
-
-            deleteObjects(this.world);
-            
             World.clear(this.world);
             Engine.clear(this.engine);
             Render.stop(this.render);
