@@ -15,6 +15,6 @@ https://maze-game-orcin.vercel.app/
 * use the keyborad to roll the ball to the end of the maze
 
 ### Using
-* Maze.js
+* Matter.js
 * Vanilla JS (ES6)
 * Sass (SCSS)
