@@ -22,7 +22,7 @@
                 </div>
                 <div class="menu__player display-none">
                     <button class="btn btn--1 btn--clicked">Single Player</button>
-                    <button class="btn btn--1">Multyplayer</button>
+                    <button class="btn btn--1">Multyplayer</button>    
                 </div>
                 <div class="menu__welcome ">
                     <p class="menu__txt">Finish the maze in</p> 
@@ -51,7 +51,6 @@
         const setDifficulty = menu.querySelector(".btn--difficulty");
         const difficultyOptions = menu.querySelectorAll(".menu__difficulty button");
         const playerOptions = menu.querySelectorAll(".menu__player button");
-
         //dynamic content
         const title = menu.querySelector(".menu__title");
         const contents = menu.querySelectorAll(".menu__content div");
@@ -64,6 +63,8 @@
             title.innerText = "Maze Game";
             exitBtn.classList.add("display-none");
             contents.forEach( div => div.classList.add("display-none") );
+            const legend = document.querySelectorAll(".legend");
+            legend.forEach( div => div.classList.add("display-none") );
             welcome.classList.remove("display-none");
             mazes.forEach( maze => {
                 if(maze.world) maze.clear() 
@@ -75,7 +76,7 @@
         exitBtn.addEventListener( "click", exit);
 
         setPlayers.addEventListener( "click", () => {
-            title.innerText = "Payers";
+            title.innerText = "Players";
             contents.forEach( div => div.classList.add("display-none") );
             players.classList.remove("display-none");
         });
@@ -90,6 +91,8 @@
             menu.classList.add("display-none");
             exitBtn.classList.remove("display-none");
             contents.forEach( div => div.classList.add("display-none") );
+            const legend = document.querySelectorAll(".legend");
+            legend.forEach( div => div.classList.remove("display-none") );
             mazes[0].playerName = numOfPlayers === 1 ? null : "Player 1";
             mazelocations.forEach( (location, i) => {
                 if(i < numOfPlayers) location.classList.remove("display-none");

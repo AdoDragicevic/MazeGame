@@ -161,7 +161,7 @@
             {
                 label: "ball",
                 render: {
-                    fillStyle: "orange"
+                    fillStyle: "#E3B505"
                 }
             }
         );

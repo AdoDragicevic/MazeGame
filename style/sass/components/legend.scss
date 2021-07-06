@@ -3,25 +3,41 @@
     left: 0;
     bottom: 0;
 
-    height: 20px;
+    height: 25px;
     width: 40px;
     padding: 20px;
     
-    background-color: rgba(239, 239, 239, .2);
+    background-color: rgba(239, 239, 239, .8);
 
-    &--up {
+    &__key {
+        position: absolute;
+        padding: 5px;
+        font-weight: 800;
+
+        &--up {
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &--right {
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+        }
+
+        &--down {
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &--left {
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+        }
 
     }
 
-    &--right {
-
-    }
-
-    &--down {
-
-    }
-
-    &--left {
-
-    }
 }
