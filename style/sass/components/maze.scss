@@ -1,0 +1,28 @@
+.maze {
+
+    display: flex;
+    height: 100%;
+    align-items: stretch;
+    background-color: black;
+
+    &__location {
+        
+        flex-grow: 1;
+        min-width: 50%;
+        position: relative;
+    
+        display: flex;
+        &--1 {
+            
+        }
+
+        &--2 {
+            
+        }
+
+        canvas {
+            
+        }
+    }
+
+}

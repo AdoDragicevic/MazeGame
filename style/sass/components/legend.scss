@@ -1,0 +1,27 @@
+.legend {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    height: 20px;
+    width: 40px;
+    padding: 20px;
+    
+    background-color: rgba(239, 239, 239, .2);
+
+    &--up {
+
+    }
+
+    &--right {
+
+    }
+
+    &--down {
+
+    }
+
+    &--left {
+
+    }
+}

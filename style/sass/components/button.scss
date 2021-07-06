@@ -1,0 +1,42 @@
+.btn {
+    text-transform: inherit; 
+    font-family: inherit;
+
+    &:hover {
+        cursor: crosshair;
+    }
+
+    &:active {
+        transform: translateY(1px);
+    }
+
+    &--1 {
+        padding: 10px;
+        margin: 1px 0 1.5px 0;
+    }
+
+    &--2 {
+        flex: 1;
+        height: 40px;
+        font-weight: 800;
+    }
+
+    &--exit {
+        position: fixed;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 3px 20px 1px 20px;
+        cursor: crosshair;
+        background-color: rgba(255, 255, 255, .2);
+        color: #eee;
+        border-style:none;
+        z-index: 2;
+    }
+
+    &--clicked {
+        transform: scale(.999);
+        background-color: rgba(239, 239, 239, .8);
+    }
+
+}

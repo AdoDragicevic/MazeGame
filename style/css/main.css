@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+html, body {
+  height: 100%; }
+
+body {
+  background-color: black;
+  box-sizing: border-box;
+  font-family: 'Electrolize', sans-serif; }
+
+main {
+  height: 100%; }
+
+.display-none {
+  display: none !important; }
+
+.maze {
+  display: flex;
+  height: 100%;
+  align-items: stretch;
+  background-color: black; }
+  .maze__location {
+    flex-grow: 1;
+    min-width: 50%;
+    position: relative;
+    display: flex; }
+
+.menu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 300px;
+  height: 350px;
+  max-width: 90%;
+  border-radius: 5px;
+  border: 3px solid rgba(255, 0, 0, 0.7);
+  box-shadow: rgba(200, 0, 200, 0.4) 0px 5px 25px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 20px 0 2px 0;
+  background-color: rgba(20, 21, 31, 0.8);
+  color: #eee; }
+  .menu__title {
+    font-size: 38px;
+    font-weight: 100; }
+  .menu__difficulty, .menu__player, .menu__welcome, .menu__time {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px 0 20px; }
+  .menu__txt {
+    padding: 5px 10px; }
+  .menu__options {
+    display: flex;
+    width: 100%; }
+
+.btn {
+  text-transform: inherit;
+  font-family: inherit; }
+  .btn:hover {
+    cursor: crosshair; }
+  .btn:active {
+    transform: translateY(1px); }
+  .btn--1 {
+    padding: 10px;
+    margin: 1px 0 1.5px 0; }
+  .btn--2 {
+    flex: 1;
+    height: 40px;
+    font-weight: 800; }
+  .btn--exit {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 3px 20px 1px 20px;
+    cursor: crosshair;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #eee;
+    border-style: none;
+    z-index: 2; }
+  .btn--clicked {
+    transform: scale(0.999);
+    background-color: rgba(239, 239, 239, 0.8); }
+
+.legend {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 20px;
+  width: 40px;
+  padding: 20px;
+  background-color: rgba(239, 239, 239, 0.2); }

@@ -1,0 +1,22 @@
+{
+  "name": "maze",
+  "version": "1.0.0",
+  "description": "Maze Game",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass style/sass/main.scss style/css/main.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AdoDragicevic/MazeGame.git"
+  },
+  "author": "Ado Dragicevic",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AdoDragicevic/MazeGame/issues"
+  },
+  "homepage": "https://github.com/AdoDragicevic/MazeGame#readme",
+  "devDependencies": {
+    "node-sass": "^6.0.0"
+  }
+}
