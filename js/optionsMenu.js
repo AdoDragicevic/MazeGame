@@ -7,7 +7,6 @@
     (function generateMazes() {
         mazelocations.forEach( (location, i) => {
             const game = new MazeGame(location, difficultyLvl, `Player ${i+1}`, keys[i]);
-            game.init(); 
             mazes.push(game);
         });
     })();
@@ -95,6 +94,7 @@
             mazes.forEach( (maze, i) => {
                 if (i < numOfPlayers) {
                     maze.location = mazelocations[i];
+                    if(!maze.world) maze.init();
                     maze.clear().setDifficulty(difficultyLvl).init();
                 } else maze.clear();
             });

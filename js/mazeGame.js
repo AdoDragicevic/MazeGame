@@ -23,7 +23,8 @@
             options: {
                 wireframes: false,
                 width: location.clientWidth,
-                height: location.clientHeight
+                height: location.clientHeight,
+                background: "#111A2C"
             }
         });
         return render;
@@ -106,7 +107,7 @@
                         label: "wall",      
                         isStatic: true,
                         render: {
-                            fillStyle: "red"
+                            fillStyle: "#8A4FFF"
                         }
                     }
                 );
@@ -128,7 +129,7 @@
                         label: "wall",
                         isStatic: true,
                         render: {
-                            fillStyle: "red"
+                            fillStyle: "#8A4FFF"
                         }
                     }
                 );
@@ -160,7 +161,7 @@
             {
                 label: "ball",
                 render: {
-                    fillStyle: "yellow"
+                    fillStyle: "orange"
                 }
             }
         );
@@ -178,7 +179,7 @@
                 isStatic: true,
                 label: "goal",
                 render: {
-                    fillStyle: "green"
+                    fillStyle: "#0B6E4F"
                 }
             }
         );
@@ -260,7 +261,8 @@
     };
     
     const deleteObjects = (world) => {
-        world.bodies.length = 0;
+        console.log("unneded function");
+        //if(world) world.bodies.length = 0;
     };
 
     const updateData = (location, difficulty) => {
