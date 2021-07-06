@@ -1,8 +1,10 @@
 # Maze Game
 
-## A game built with matter.js!
+## Complete the maze in record time, or play agains a friend! A game built with Matter.js! :video_game:
 
-### Visit the game at 
+### Try it on Vercel
+
+https://maze-game-orcin.vercel.app/
 
 ### Functionalities
 * single player: compete the maze in record time
